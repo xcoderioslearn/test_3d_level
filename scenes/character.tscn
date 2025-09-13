@@ -13,20 +13,19 @@ radius = 0.3
 
 [node name="Character" type="CharacterBody3D"]
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_pjt0s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -0.00565672, 2.55938, -0.00218239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.836298, 0)
 shape = SubResource("BoxShape3D_ig7tw")
 
 [node name="humanfigure" parent="." instance=ExtResource("2_wa5vi")]
-transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="SpringArmPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 0)
 script = ExtResource("3_wa5vi")
-min_vertical_angle = -90.0
-max_vertical_angle = 0.757473
 
 [node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot"]
 shape = SubResource("SphereShape3D_my7n2")
@@ -35,6 +34,5 @@ spring_length = 2.0
 [node name="SpringPosition" type="Node3D" parent="SpringArmPivot/SpringArm3D"]
 
 [node name="Camera3D" type="Camera3D" parent="SpringArmPivot" node_paths=PackedStringArray("spring_arm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.80443)
 script = ExtResource("4_wfnr8")
 spring_arm = NodePath("../SpringArm3D/SpringPosition")

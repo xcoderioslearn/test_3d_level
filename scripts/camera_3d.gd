@@ -6,4 +6,5 @@ extends Camera3D
 
 
 func _process(delta: float) -> void:
-	position = lerp(position, spring_arm.position, delta*lerp_power)
+	position = lerp(position, spring_arm.global_position, delta * lerp_power)
+	print(spring_arm.position,spring_arm.global_position)
