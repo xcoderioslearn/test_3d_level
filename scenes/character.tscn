@@ -12,7 +12,7 @@ size = Vector3(0.933433, 1.67479, 0.456513)
 radius = 0.3
 
 [node name="Character" type="CharacterBody3D"]
-collision_layer = 2
+collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_pjt0s")
 
@@ -28,8 +28,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 0)
 script = ExtResource("3_wa5vi")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot"]
+collision_mask = 3
 shape = SubResource("SphereShape3D_my7n2")
-spring_length = 2.0
+spring_length = 6.0
 
 [node name="SpringPosition" type="Node3D" parent="SpringArmPivot/SpringArm3D"]
 
