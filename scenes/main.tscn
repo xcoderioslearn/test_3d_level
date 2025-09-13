@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvyibhgendbq4"]
+[gd_scene load_steps=3 format=3 uid="uid://cvyibhgendbq4"]
 
 [ext_resource type="PackedScene" uid="uid://bkkmjrsw8nhju" path="res://inhereted scenes/floor.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://d3q1vhdth0gl3" path="res://character.tscn" id="2_0xm2m"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0xm2m"]
-margin = 2.657
-size = Vector3(7.12, 6.59, 5.98)
+[ext_resource type="PackedScene" uid="uid://d3q1vhdth0gl3" path="res://scenes/character.tscn" id="2_0xm2m"]
 
 [node name="TestLevel" type="Node3D"]
 
@@ -13,15 +9,6 @@ size = Vector3(7.12, 6.59, 5.98)
 
 [node name="Character" parent="." instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.785, 0.101, 13.422)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="Character"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.18561, 0)
-shape = SubResource("BoxShape3D_0xm2m")
-spring_length = 5.0
-
-[node name="Camera3D" type="Camera3D" parent="Character/SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.26)
-visible = false
 
 [node name="Lights" type="Node3D" parent="."]
 
