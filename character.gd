@@ -3,7 +3,7 @@ extends CharacterBody3D
 const SPEED = 10
 const JUMP_VELOCITY = 7
 const MOUSE_SENS = 0.001
-@onready var camera = $Camera3D
+@onready var camera = $SpringArm3D/Camera3D
 var mouse_locked := true
 
 func _ready() -> void:
