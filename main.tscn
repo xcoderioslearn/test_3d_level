@@ -8,7 +8,7 @@
 [node name="Floor" parent="." instance=ExtResource("1_ig7tw")]
 
 [node name="Character" parent="." instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.661201, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32458, 0.661201, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Character"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 6.3)

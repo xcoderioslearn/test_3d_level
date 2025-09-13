@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
-const MOUSE_SENS = 0.002
+const SPEED = 10
+const JUMP_VELOCITY = 7
+const MOUSE_SENS = 0.001
 @onready var camera = $Camera3D
 var mouse_locked := true
 
